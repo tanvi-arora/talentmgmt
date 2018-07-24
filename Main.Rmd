@@ -1,0 +1,19 @@
+---
+title: "Talent_Management"
+author: "Tanvi Arora"
+date: "July 23, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# load libraries
+
+library(knitr)
+
+
+# read code chunks
+read_chunk('R/load_dataset.R')
+```
+
