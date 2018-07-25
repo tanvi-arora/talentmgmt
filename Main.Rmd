@@ -15,5 +15,10 @@ library(knitr)
 
 # read code chunks
 read_chunk('R/load_dataset.R')
+read_chunk('R/tidy_dataset.R')
+```
+
+### Tidy Data
+```{r tidy_dataset}
 ```
 
