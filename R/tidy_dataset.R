@@ -7,9 +7,9 @@
 ###########################################################################################
 ##@knitr tidy_dataset
 
-# Verify number of rows and columns in empdata dataframe
+# Verify number of rows and columns in the raw empdata dataframe
 dim(empdata.raw)
-# Verify the structure of empdata dataframe
+# Verify the structure of the raw empdata dataframe
 str(empdata.raw)
 # Reviewed each data colum and determined that multiple fields need to be converted from INT class to FACTOR class
 #     Class of Education field should be FACTOR not INT
@@ -39,17 +39,13 @@ empdata.raw[,'StockOptionLevel']<-factor(empdata.raw[,'StockOptionLevel'])
 #     class of WorkLifeBalance field should be FACTOR not INT
 empdata.raw[,'WorkLifeBalance']<-factor(empdata.raw[,'WorkLifeBalance'])
 
-# Verify the updated structure of empdata dataframe
-str(empdata.raw)
-
 # Verify that there is no data missing from the dataframe
 sum(is.na(empdata.raw))
 
 # Shorten dataframe column names that exceed 12 characters
-#
+# Assign to new empdata-related dataframe in which column names will be shortened as necessary
 empdata.updcolnames <- empdata.raw
 # Note that the respective original column name is in comment below for reference if needed.
-#
 colnames(empdata.updcolnames)[3] <- "BusinessTrvl"     # BusinessTravel
 colnames(empdata.updcolnames)[6] <- "DistFromHome"     # DistanceFromHome
 colnames(empdata.updcolnames)[8] <- "EducationFld"     # EducationField
@@ -74,10 +70,8 @@ colnames(empdata.updcolnames)[33] <- "YrsInCurRole"    # YearsInCurrentRole
 colnames(empdata.updcolnames)[34] <- "YrsSncePromo"    # YearsSinceLastPromotion
 colnames(empdata.updcolnames)[35] <- "YrsWthCurMgr"    # YearsWithCurrentManager
 
-#
+# Create new empdata-related dataframe with tidied (ok) column names
 empdata.okcolnames <- empdata.updcolnames
-#Verify column name updates to empdata dataframe
-str(empdata.okcolnames)
 
 # Define set of functions to set value of a new description column for each level and rating column
 #    Define function to set value of a new description column using the Education level list
@@ -122,27 +116,25 @@ set_low2outstanddescrip <- function (df, sourcecol, newcol){
 
 #Create and Populate new description fields for corresponding level and ratings fields 
 #Note that all new field names are no longer than 12 characters long.
-#    Create and Populate a new Education Description field
+#    Create and Populate a new Education Description field and assign to new empdata-related dataframe
 empdata.educdesc <- set_educdescrip(empdata.okcolnames, "Education", "EducDesc")
 
-#    Create and Populate a new Environment Satisfaction Description field
+#    Create and Populate a new Environment Satisfaction Description field and assign to new empdata-related dataframe
 empdata.envirsatdesc <- set_low2veryhighdescrip(empdata.educdesc, "EnvirSatisf", "EnvirSatDesc")
-#    Create and Populate a new Job Involvement Description field
+#    Create and Populate a new Job Involvement Description field and assign to new empdata-related dataframe
 empdata.jobinvlvdesc <- set_low2veryhighdescrip(empdata.envirsatdesc, "JobInvolvmnt", "JobInvlvDesc")
-#    Create and Populate a new Job Satisfaction Description field
+#    Create and Populate a new Job Satisfaction Description field and assign to new empdata-related dataframe
 empdata.jobsatdesc <- set_low2veryhighdescrip(empdata.jobinvlvdesc, "JobSatisf", "JobSatDesc")
-#    Create and Populate a new Relationship Satisfaction Description field
+#    Create and Populate a new Relationship Satisfaction Description field and assign to new empdata-related dataframe
 empdata.rlshpsatdesc <- set_low2veryhighdescrip(empdata.jobsatdesc, "RelshipSatis", "RlshpSatDesc")
 
-#    Create and Populate a new Performance Rating Description field
+#    Create and Populate a new Performance Rating Description field and assign to new empdata-related dataframe
 empdata.perfrtgdesc <- set_low2outstanddescrip(empdata.rlshpsatdesc, "PerforRating", "PerfRtgDesc")
 
-#    Create and Populate a new WorkLifeBalance Description field
+#    Create and Populate a new WorkLifeBalance Description field and assign to new empdata-related dataframe
 empdata.wklifbaldesc <- set_bad2bestdescrip(empdata.perfrtgdesc, "WorkLifeBal", "WkLifBalDesc")
 
-#
+# Create a tidied empdata dataframe (empdata.tidy) once we have completed the data and structure tidying tasks
 empdata.tidy <- empdata.wklifbaldesc
 #Verify structure of final dataframe
 str(empdata.tidy)
-
-#TEAM QUESTION:   do we need to convert the new level and rating Description fields to factors??

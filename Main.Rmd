@@ -7,18 +7,18 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
 # load libraries
 
 library(knitr)
 
-
 # read code chunks
 read_chunk('R/load_dataset.R')
 read_chunk('R/tidy_dataset.R')
+
+```
+### Load Data
+```{r load_dataset}
 ```
 
 ### Tidy Data
 ```{r tidy_dataset}
-```
-
