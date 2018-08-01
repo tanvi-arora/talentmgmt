@@ -10,11 +10,13 @@ knitr::opts_chunk$set(echo = TRUE)
 # load libraries
 
 library(knitr)
+library(psych) 
+library(kableExtra)
 
 # read code chunks
 read_chunk('R/load_dataset.R')
 read_chunk('R/tidy_dataset.R')
-
+read_chunk('R/desc_stat.R')
 ```
 ### Load Data
 ```{r load_dataset}
@@ -22,3 +24,13 @@ read_chunk('R/tidy_dataset.R')
 
 ### Tidy Data
 ```{r tidy_dataset}
+```
+
+### Descriptive Statistics
+```{r desc_stat}
+empdata.tidy.des.stat<- describe(empdata.tidy[,c("Age","Gender","Education","MaritalStat", "DailyRate", "HourlyRate", "MonthlyInc", "MonthlyRate", "JobRole")])
+
+kable(empdata.tidy.des.stat) %>%
+  kable_styling("striped", full_width = F) %>%
+  row_spec(0, angle = -45)
+```
