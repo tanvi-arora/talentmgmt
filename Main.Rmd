@@ -1,6 +1,6 @@
 ---
 title: "Talent_Management"
-author: "Tanvi Arora, Rebecca Holsapple"
+author: "Tanvi Arora, Rebecca Holsapple, Anjli Solsi, Anne Francomano"
 date: "July 23, 2018"
 output: html_document
 ---
@@ -19,6 +19,7 @@ library(caret)
 #for visualization
 library(ggplot2)
 library(ggrepel)
+library(randomcoloR)
 
 
 library(scales)
@@ -33,7 +34,7 @@ read_chunk('R/tidy_dataset.R')
 read_chunk('R/feature_sel_stepwise.R')
 read_chunk('R/attrition_viz.R')
 read_chunk('R/desc_stat.R')
-
+read_chunk('R/age_inc_analysis.R')
 ```
 ### Load Data
 ```{r load_dataset}
@@ -90,5 +91,9 @@ varImp() - A generic method for calculating variable importance for objects prod
 ```{r plot_attr}
 ```
 
+### Data Visualization
+
+```{r age_inc_analysis}
+```
 
 
