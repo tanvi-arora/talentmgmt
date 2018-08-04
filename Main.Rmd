@@ -1,6 +1,6 @@
 ---
 title: "Talent_Management"
-author: "Tanvi Arora"
+author: "Tanvi Arora, Rebecca Holsapple"
 date: "July 23, 2018"
 output: html_document
 ---
@@ -23,12 +23,16 @@ library(ggrepel)
 
 library(scales)
 
+library(psych) 
+library(kableExtra)
+library(plyr)
 
 # read code chunks
 read_chunk('R/load_dataset.R')
 read_chunk('R/tidy_dataset.R')
 read_chunk('R/feature_sel_stepwise.R')
 read_chunk('R/attrition_viz.R')
+read_chunk('R/desc_stat.R')
 
 ```
 ### Load Data
@@ -37,6 +41,10 @@ read_chunk('R/attrition_viz.R')
 
 ### Tidy Data
 ```{r tidy_dataset}
+```
+
+### Descriptive Statistics
+```{r desc_stat}
 ```
 
 ### Find a suitable model for Attrition based on given data
@@ -81,4 +89,6 @@ varImp() - A generic method for calculating variable importance for objects prod
 
 ```{r plot_attr}
 ```
+
+
 
