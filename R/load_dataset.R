@@ -13,4 +13,8 @@
 #     -- Save the excel file as an MSDOS CSV file with the name EmployeeData201807.csv
 
 # Load the state size file data into R
-empdata.raw <- read.csv(file="Data/EmployeeData201807.csv", header=TRUE, sep=",")
+#empdata.raw <- read.csv(file="Data/EmployeeData201807.csv", header=TRUE, sep=",")
+empdata.raw <- read.xlsx("Data/CaseStudy2-data.xlsx", sheetName = "HR-employee-attrition Data", stringAsFactors = F, header = T)
+head(empdata.raw)
+
+summary(empdata.raw)
