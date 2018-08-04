@@ -11,11 +11,24 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(knitr)
 library('xlsx')
+library(dplyr)
+
+#caret library is needed for varImp function
+library(caret)
+
+#for visualization
+library(ggplot2)
+library(ggrepel)
+
+
+library(scales)
 
 
 # read code chunks
 read_chunk('R/load_dataset.R')
 read_chunk('R/tidy_dataset.R')
+read_chunk('R/feature_sel_stepwise.R')
+read_chunk('R/attrition_viz.R')
 
 ```
 ### Load Data
@@ -24,3 +37,48 @@ read_chunk('R/tidy_dataset.R')
 
 ### Tidy Data
 ```{r tidy_dataset}
+```
+
+### Find a suitable model for Attrition based on given data
+
+To determine the initial model,  glm is used. It allows us to give option of defining response variable as binomial, for the given dataset, Attrition is the response variable and has 2 values , TRUE/FALSE. For glm, R converts categorical variables into indicator variables. It does not like spaces in categorical values, so the given dataset is modified first to remove spaces from the categorical variables.
+
+**initial model**
+```{r feat_sel_init}
+```
+
+
+AIC statistics for this model is 901.66.
+
+**reduced model**
+```{r feat_sel_step}
+```
+
+We used stepwise selection method to select the appropriate predictors for Attrition model.default dirction= "both".  AIC statistics for this model is 901.66. Stepwise selection , chose the 10th model @ AIC = 884.0241
+This is not the best model but considering our prelimenary analysis, this model should be able to provide us with important predictors. 
+
+*About the stepwise selection method*
+step uses add1 and drop1 repeatedly; it will work for any method for which they work, and that is determined by having a valid method for extractAIC. When the additive constant can be chosen so that AIC is equal to Mallows' Cp, this is done and the tables are labelled appropriately.
+
+stepwise selection method: ![](Images/stepwise.png)
+
+*Image courtesy: Kelas Karyawan - kurikulum.org*
+
+**Important variables**
+
+
+varImp() - A generic method for calculating variable importance for objects produced by train and method specific methods
+
+```{r feat_sel_varimp}
+```
+
+
+```{r feat_sel_plot}
+```
+
+
+### Visualize attrition and some of its factors
+
+```{r plot_attr}
+```
+
