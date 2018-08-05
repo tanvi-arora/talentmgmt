@@ -85,11 +85,55 @@ varImp() - A generic method for calculating variable importance for objects prod
 ```{r feat_sel_plot}
 ```
 
+Above plot has top 10 important factors from our selected Model. We will discuss the top 3 -
+
+1- OVerTime 
+2- StockOptions
+3- Environment Satisfaction
 
 ### Visualize attrition and some of its factors
 
 ```{r plot_attr}
 ```
+
+
+In the past year we have seen 16% Attrition in this company. Let's analyze some of these factors and see if there is any relation with Attrition.
+
+**OverTime and  Attrition **
+
+Overtime can be positive in that it allows employees the opportunity to make extra money and to make their mark on their workplaces, but it can also be negative in that too much overtime can lead to employee burnout.When employees are overworked, they become less productive and are more inclined to quit their job for other opportunities.
+
+
+```{r plot_attr_ot}
+```
+
+There are 200+ people leaving the company , out of which about 54% did Overtime. The plot showing retention, about 24% employees did overtime.   POints to consider -
+
+-  What is the need for OverTime? Is this requirement concentrated to cetain departments ?
+-  Are you compensating your employees enough for the overtime ?
+
+
+**Stock Options and Attrition **
+Traditionally, stock option plans have been used as a way for companies to reward top management and "key" employees and link their interests with those of the company and other shareholders.Stock Option plans may be intended to give all employees stock in the company or to just provide a benefit for some "key" employees
+
+```{r plot_attr_inv}
+```
+
+About 65% employees leaving the company have stocl lvl option 0. Majority of retained employees have StockOption lvl 1. Companies can have different plans for stock options and keep top benefits for the key employees but you may want to revise your lvl 0 stock option to get more employees thinking about long term benefits.
+
+
+
+**Environment Satisfaction and Attrition **
+
+Many businesses fail to understand the importance of working environment for employee . Employee us an essential component in the process of achieving the mission and vision of business. To meet the standards of organization, employees need a working environment that allows them to work freely without problems that may restrain them from performing upto the level of their full potential.Work environment consists of employees safety, job security, relations with co-workers, work recognition , motivation for performing well  among many others.
+
+```{r plot_attr_env}
+```
+
+About 30% of the employees leaving the company  show low environment satisfaction.Close to 50% people leaving the company had high environment satisfaction but there could be other factors leading them to seek other oportunities  . 
+
+Skip level meetings are a suggested way to get feedback about immediate supervisors . Periodic performance appreciations and team building activities are a good way to boost a positive work environment.
+
 
 ### Data Visualization
 
