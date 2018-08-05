@@ -9,6 +9,7 @@
 
 #stepwise regression
 empdata.tidy.multfact <- empdata.tidy[, !(colnames(empdata.tidy) %in% c("EmployeeCnt","StandardHrs", "Over18","stringAsFactors","EducDesc","EnvirSatDesc","JobInvlvDesc","JobSatDesc","RlshpSatDesc","PerfRtgDesc","WkLifBalDesc"))]
+empdata.tidy.multfact.orig <- empdata.tidy.multfact
 empdata.tidy.multfact$Attrition <-  as.numeric(empdata.tidy.multfact$Attrition)-1
 
 #remove white spaces from values in factors

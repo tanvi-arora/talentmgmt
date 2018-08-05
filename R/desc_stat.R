@@ -5,7 +5,7 @@
 # Description : R code creates descriptive statistics and displays them in a table
 # Source File : This script uses the source file empdata.tidy
 ###########################################################################################
-##@knitr empdata.tidy
+##@knitr desc_stat
 
 empdata.tidy.des.stat<- describe(empdata.tidy[,c("Age","Gender","Education","MaritalStat", "DailyRate", "HourlyRate", "MonthlyInc", "MonthlyRate", "JobRole")])
 
