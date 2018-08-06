@@ -15,9 +15,8 @@ des <- describe(empdata.tidy.des)[,c(3:5, 8:10, 13)]
 empdata.des <- print(des, digit=2)
 
 ##use library(kable) for a nice table of the descriptive statistics 
-kable(empdata.des, "latex", booktabs = T, align = "c") %>%
-  kable_styling(latex_options = "striped", full_width = F) %>%
-  row_spec(0, angle = 45)
+
+kable(empdata.des, format = "markdown") 
 
 ##use library(ggplot2) for histogram of the Monthly Income with a trend overlay of the density of the employee income
 ggplot(data=empdata.tidy, aes(MonthlyInc)) + 
@@ -27,7 +26,7 @@ ggplot(data=empdata.tidy, aes(MonthlyInc)) +
                  fill="green", 
                  alpha=.2) + 
   geom_density(col=2) + 
-  labs(title="Monthly Income for Employees", x="Monthly Income (In Thousands of Dollars)", y="Density")+
+  labs(title="Monthly Income for Employees", x="Monthly Income (In Thousands of Dollars)", y="Precentage")+
   theme(plot.title = element_text(hjust = 0.5))
 
 ##Historgram of the Employee Ages with a trend overlay to visually describe the company population
@@ -42,13 +41,29 @@ ggplot(data=empdata.tidy, aes(Age)) +
   labs(title="Age of Employees", x="Age (In Years)", y="Density")+
   theme(plot.title = element_text(hjust = 0.5))
 
+##Create Frequency tables for Gender, Education and Occupation (JobRoles) Using library(summarytools)
+table1 <- table(empdata.tidy$Gender)
+prop.table(table1)
+summarytools::freq(empdata.tidy$Gender, order = "freq")
 
-gender <- count(empdata.tidy, 'Gender')
-gender
-education <- count(empdata.tidy, 'Education')
-education
-occupation <- count(empdata.tidy, 'JobRole')
-occupation
+table2 <- table(empdata.tidy$Education)
+prop.table(table2)
+summarytools::freq(empdata.tidy$Education, order = "freq")
 
-management.count<-count(empdata.tidy$JobLevel==5)
+table3 <- table(empdata.tidy$JobRole)
+prop.table(table3)
+summarytools::freq(empdata.tidy$JobRole, order = "freq")
+
+##Another possibility for table of all 3 factors
+cool <- data.frame(empdata.tidy$Gender, empdata.tidy$Education, empdata.tidy$JobRole)
+dfSummary(cool)
+
+##Management count and table NEED TO TIDY UP
+management.count<- length(which(empdata.tidy$JobLevel==5))
 management.count
+
+management.percent <- 100 * length(which(empdata.tidy$JobLevel == 5)) / length(empdata.tidy$JobLevel)
+management.percent
+
+table4 <- table(management.count, management.percent)
+table4
