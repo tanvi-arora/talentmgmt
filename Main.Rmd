@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(knitr)
 library('xlsx')
+library(plyr)
 library(dplyr)
 
 #caret library is needed for varImp function
@@ -26,7 +27,7 @@ library(scales)
 
 library(psych) 
 library(kableExtra)
-library(plyr)
+library(summarytools)
 
 # read code chunks
 read_chunk('R/load_dataset.R')
@@ -45,6 +46,7 @@ read_chunk('R/age_inc_analysis.R')
 ```
 
 ### Descriptive Statistics
+
 ```{r desc_stat}
 ```
 
