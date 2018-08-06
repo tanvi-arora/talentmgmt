@@ -21,6 +21,8 @@ library(caret)
 library(ggplot2)
 library(ggrepel)
 library(randomcoloR)
+library(gridExtra)
+library(ggthemes)
 
 
 library(scales)
@@ -36,6 +38,7 @@ read_chunk('R/feature_sel_stepwise.R')
 read_chunk('R/attrition_viz.R')
 read_chunk('R/desc_stat.R')
 read_chunk('R/age_inc_analysis.R')
+read_chunk('R/life_sat_analysis.R')
 ```
 ### Load Data
 ```{r load_dataset}
@@ -137,9 +140,11 @@ About 30% of the employees leaving the company  show low environment satisfactio
 Skip level meetings are a suggested way to get feedback about immediate supervisors . Periodic performance appreciations and team building activities are a good way to boost a positive work environment.
 
 
-### Data Visualization
+### Data Visualization 
 
 ```{r age_inc_analysis}
 ```
 
+```{r life_sat_analysis}
+```
 
