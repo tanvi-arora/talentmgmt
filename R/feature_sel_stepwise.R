@@ -72,6 +72,9 @@ head(empdata.varimp.sort,10)
 ##@knitr feat_sel_plot
 theme_set(theme_classic())
 
+#library(wordcloud)
+#pal = brewer.pal(8,"Dark2")
+#wordcloud(empdata.varimp.sort$varName , freq = empdata.varimp.sort$varImp*100, max.words = 100, random.order = FALSE, random.colours = FALSE, colors = pal, scale = c(5,0.3), rot.per = 0.15)
 ggplot(empdata.varimp.sort[1:10,], aes(x=unlist(varName), y=varImp)) + geom_point( col="tomato2", size=3) + scale_y_continuous(expand = c(0,0)) + geom_segment(aes(x=unlist(varName), xend = unlist(varName), y=min(varImp), yend=max(varImp)), linetype="dashed", size=0.1) + labs(title="Variable importance in Reduced model", subtitle="varName vs varImp", caption="source:empdata.varimp.sort") + coord_flip()
 
 
