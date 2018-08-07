@@ -17,7 +17,7 @@ R source code to determine the tidy the employee attrition data provided by Qual
         Dataframe; the final updated version of empdata.updcolnames once its column names no longer exceed 12 characters.
         
 3. set_educdescrip \
-        Function that creates and populates a new column containing the description of education level based on a numeric value in a source             column in the same dataframe. \
+        Function that creates and populates a new column containing the description of education level from Below College to Doctor based on a numeric value in a source column in the same dataframe. \
 
         Three arguments = dataframe, sourcecol, newcol \
                 dataframe - name of a datafram object \
@@ -54,3 +54,26 @@ R source code to determine the tidy the employee attrition data provided by Qual
                 sourcecol - string name of the column in the dataframe that contains a number value from 1 to 4\
                 newcol - string name of the new column that will be added to the input dataframe and will be populated with the Low to Outstanding level description corresponding to the number in the dataframe's sourcecol. \
                 output  - returns a modified input dataframe with an additional column called newcol, that contains the Low to Outstanding level description that corresponds to the number in the dataframe's sourcecol 
+
+7. empdata.educdesc \
+        Dataframe; the updated version of empdata.okcolnames with additional column containing the Education Level Description
+8. empdata.envirsat \
+        Dataframe; the updated version of empdata.okcolnames with additional column containing the Environment Satisfaction Level Description
+
+9. empdata.jobinvlvdesc \
+        Dataframe; the updated version of empdata.okcolnames with additional column containing the Job Involvement Level Description
+ 
+10. empdata.jobsatdesc \
+        Dataframe; the updated version of empdata.okcolnames with additional column containing the Job Satisfaction Level Description
+        
+11. empdata.rlshpsatdesc \
+        Dataframe; the updated version of empdata.okcolnames with additional column containing the Relationship Satisfaction Level Description
+
+12. empdata.perfrtgdesc \
+        Dataframe; the updated version of empdata.okcolnames with additional column containing the Performance Rating Level Description
+        
+ 13. empdata.wklifbaldesc \
+        Dataframe; the updated version of empdata.okcolnames with additional column containing the Work Life Balance Level Description
+         
+ 14. empdata.tidy \
+        Dataframe; the updated version of empdata.okcolnames after all tidying activities are completed
