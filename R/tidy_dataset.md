@@ -23,8 +23,8 @@ R source code to determine the tidy the employee attrition data provided by Qual
                 dataframe - name of a datafram object \
                 sourcecol - string name of the column in the dataframe that contains a number representation of the employee education level \
                 newcol - string name of the new column that will be added to the input dataframe and will be populated with the education level description corresponding to the number in the dataframe's sourcecol. \
-        
-    2. output  - returns a modified input dataframe with an additional column called newcol, that contains the education level description that corresponds to the number in the dataframe's sourcecol 
+                output  - returns a modified input dataframe with an additional column called newcol, that contains the education level description that corresponds to the number in the dataframe's sourcecol 
+                
 4. set_low2veryhighdescrip - function ..  
     1. arguments -
     2. output  -
