@@ -20,4 +20,46 @@ Data/CaseStudy2-data.xlsx
 7. empdata.RelshipSatis - get number and percentages for each rating of Relationship Status 
 
 **Functions Used :**
-1. *colnames()*: change column names of an object
+1. *lm()*: linear model function used to create a simple linear regression
+2. *as.data.frame()*: convert data into class data frame 
+3. *groupby()*: converts existing table into grouped table where operations are performed 
+4. *summarise()*: used on grouped data 
+5. *mutate()*: adds new variables while preserving exisitng variables 
+6. *grid.arrange()*: set up layout for multiple graphs from ggplot
+
+**Plots Created**
+
+Basic plot attritbutes 
+labs = define title caption for source of image
+xlab = label for x axis
+ylab = label for y axis
+theme( plot.title = element_text(hjust=0.5), panel.background = element_blank()) : to place title of plot in the centre and make background of plot as blank with no color
+
+**Pfd**
+
+create frequency and percentage table
+*Datasets*
+empdata.attr = describe data
+
+*plot*  - piechart
+Besides the basic cosmetic features, 
+1- ggplot :
+  data - 
+  fill color = 
+  specifics of ggplot used
+  
+  
+  **PLOT2**
+  
+  Factor for analysis - life satisfaction: all the factors
+  *Datasets*
+  empdata.tidy - base dataset from cleaning data
+  
+  *plot* - barchart
+  1) data = empdata.attr.yes.ot
+  plot1
+  plot2
+  plot3
+  plot4
+  plot5
+  plot6
