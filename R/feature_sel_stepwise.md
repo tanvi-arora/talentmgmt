@@ -4,7 +4,7 @@
 R source code to create a prediction model and determine important predictors/factors
 
 **source dataset :** 
-1) 
+1) Data/CaseStudy2-data.xlsx
 
 **tidy dataset**
 empdata.tidy
