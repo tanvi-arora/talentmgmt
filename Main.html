@@ -92,6 +92,9 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -498,8 +501,13 @@ str(empdata.tidy)</code></pre>
 ##  $ PerfRtgDesc    : chr  &quot;3 Excellent&quot; &quot;4 Outstanding&quot; &quot;3 Excellent&quot; &quot;3 Excellent&quot; ...
 ##  $ WkLifBalDesc   : chr  &quot;1 Bad&quot; &quot;3 Better&quot; &quot;3 Better&quot; &quot;3 Better&quot; ...</code></pre>
 </div>
-<div id="descriptive-statistics" class="section level3">
-<h3>Descriptive Statistics</h3>
+<div id="preliminary-analysis" class="section level3">
+<h3>Preliminary Analysis</h3>
+<p>While conducting the Exploratory Data Analysis we performed multiple preliminary tests in order to get a better understand of the dataset and attempt to summarize the main characteristics by way of visualizing any possible trends. First and foremost, after receiving and cleaning the dataset an initial analysis concluded there were no observations collected from individuals under the age of 18, which allows us to proceed without requiring parental informed consent forms.</p>
+<p>** Main Characteristic **</p>
+<p>The dataset was comprised of 35 variables and 1470 observations of which there were no missing observations or outliers we deemed as significant. There were 2 variables that had the same response from all employee thus we did not utilize them for our analysis those variable are Standard Hours and Employee Count. The descriptive statistics table provides the mean, standard deviation, median, minimum, maximum, range and standard error of nine of the variables. We use these statistics to measure the central tendencies and spreads of the variables we are interested in.</p>
+<p>** Visualizing Characteristic **</p>
+<p>To determine if there is a normal distribution we conducted histogram plots on two of the variables: Age and Monthly Income. After visually examining the Monthly Income histogram the distribution right-skewed and not a normal distribution. This could be due to the data that have a lower bound we will proceed without a transformation and run the models with the original data then determine if a transformation is required. The Age Histogram appears to be more normally distributed with a slight right skew. We ran three frequency tables and count of 3 other variables. The frequency tables for Gender, Education and Job Roles indicate: there is a 60/40 split of males to females; almost 70% of those working at TARA hold some form of advanced degree; and over half of the population of interest come from the three Job Roles Sales Executive, Research Scientist, and Lab Tech. We determined the management position from the population of interest were those classified as the highest Job Level which came back as falling into two categories, Manager and Research Director, totally 69 individuals.</p>
 <pre class="r"><code>##use library(psych) for describe function to get descriptive statistics
 empdata.tidy.des&lt;- (empdata.tidy[,c(&quot;Age&quot;,&quot;Gender&quot;,&quot;Education&quot;,&quot;MaritalStat&quot;, 
                                     &quot;DailyRate&quot;, &quot;HourlyRate&quot;, &quot;MonthlyInc&quot;, &quot;MonthlyRate&quot;, 
@@ -1426,7 +1434,9 @@ ggplot(data = empdata.attr.env, mapping = aes(x = EnvirSatDesc, fill = Attrition
 <p>Based on the plot, for the majority of age groups, males as a total are compensated a higher amount than females as a total. That is something for TARA to consider and potentially be concerned about when looking at attrition, as equal pay is very important for females when looking at career opportunities. The trend of the graph highlights that individuals in the middle of their career tend to make the most money, while newer and very seasoned employees see a smaller income. It is important for TARA to consider income in an appeal to the newer and seasoned population, to retain great minds and the future leaders.</p>
 <p>The scatterplot is a second visualization of the same data. Based on the fit line, it is clear there is a positive relationship between age and monthly income, having a trend of income increasing with age. However, as age increases, it is also visible that the range of income grows. This plot supports the older employees having a larger income, however, based on the bar plot representation, that may not necessarily be the case. TARA may benefit from evaluating their financial compensation among employees to make sure it is appropriate and reflective of value added to the company.</p>
 <pre class="r"><code>#first bar plot representation of Total Monthly Income by Age
+#remove exponential scaling of numbers
 options(scipen = 999)
+#set limits for plot and specify axis labels
 brks &lt;- seq(-500000, 500000, 50000)
 lbls &lt;- paste0(as.character(c(seq(500, 0, -50), seq(50, 500, 50))), &quot;k&quot;)
 ggplot(empdata.tidy, aes(x=reorder(Age, Age), y=MonthlyInc, fill=Gender)) + 

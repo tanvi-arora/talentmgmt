@@ -51,7 +51,17 @@ read_chunk('R/life_sat_analysis.R')
 ```{r tidy_dataset}
 ```
 
-### Descriptive Statistics
+### Preliminary Analysis
+
+While conducting the Exploratory Data Analysis we performed multiple preliminary tests in order to get a better understand of the dataset and attempt to summarize the main characteristics by way of visualizing any possible trends. First and foremost, after receiving and cleaning the dataset an initial analysis concluded there were no observations collected from individuals under the age of 18, which allows us to proceed without requiring parental informed consent forms.
+
+** Main Characteristic **
+
+The dataset was comprised of 35 variables and 1470 observations of which there were no missing observations or outliers we deemed as significant. There were 2 variables that had the same response from all employee thus we did not utilize them for our analysis those variable are Standard Hours and Employee Count. The descriptive statistics table provides the mean, standard deviation, median, minimum, maximum, range and standard error of nine of the variables. We use these statistics to measure the central tendencies and spreads of the variables we are interested in.  
+
+** Visualizing Characteristic **
+
+To determine if there is a normal distribution we conducted histogram plots on two of the variables: Age and Monthly Income. After visually examining the Monthly Income histogram the distribution right-skewed and not a normal distribution. This could be due to the data that have a lower bound we will proceed without a transformation and run the models with the original data then determine if a transformation is required. The Age Histogram appears to be more normally distributed with a slight right skew. We ran three frequency tables and count of 3 other variables. The frequency tables for Gender, Education and Job Roles indicate: there is a 60/40 split of males to females; almost 70% of those working at TARA hold some form of advanced degree; and over half of the population of interest come from the three Job Roles Sales Executive, Research Scientist, and Lab Tech. We determined the management position from the population of interest were those classified as the highest Job Level which came back as falling into two categories, Manager and Research Director, totally 69 individuals.
 
 ```{r desc_stat}
 ```
