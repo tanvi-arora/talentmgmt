@@ -17,6 +17,9 @@ library(dplyr)
 #caret library is needed for varImp function
 library(caret)
 
+#correlation
+library(corrplot)
+
 #for visualization
 library(ggplot2)
 library(ggrepel)
@@ -92,9 +95,9 @@ varImp() - A generic method for calculating variable importance for objects prod
 
 Above plot has top 10 important factors from our selected Model. We will discuss the top 3 -
 
-1- OVerTime 
-2- StockOptions
-3- Environment Satisfaction
+1- OVerTime  \
+2- StockOptions \
+3- Environment Satisfaction \
 
 ### Visualize attrition and some of its factors
 
@@ -117,6 +120,11 @@ There are 200+ people leaving the company , out of which about 54% did Overtime.
 -  What is the need for OverTime? Is this requirement concentrated to cetain departments ?
 -  Are you compensating your employees enough for the overtime ?
 
+```{r plot_attr_ot_areas}
+```
+
+Reviewing different areas within the company, we can see that Sales Executives within Sales department and Laboratory Technicians within Research & Development department are major overtime workers. 
+
 
 **Stock Options and Attrition **
 Traditionally, stock option plans have been used as a way for companies to reward top management and "key" employees and link their interests with those of the company and other shareholders.Stock Option plans may be intended to give all employees stock in the company or to just provide a benefit for some "key" employees
@@ -126,6 +134,16 @@ Traditionally, stock option plans have been used as a way for companies to rewar
 
 About 65% employees leaving the company have stocl lvl option 0. Majority of retained employees have StockOption lvl 1. Companies can have different plans for stock options and keep top benefits for the key employees but you may want to revise your lvl 0 stock option to get more employees thinking about long term benefits.
 
+
+```{r corr_attr_inv}
+```
+
+One would tend to think Stock Options would be correlated to Job Levels or Years at Firm, but based on our data, there is no correlation between them. There is some correlation between Job Levels and Years at Firm but none with StockOptions.
+
+```{r plot_Attr_invc_areas}
+```
+
+Most of the employees have lower stockOptions i.e. 0 and 1 .Most of the employees are within the 10 years at firm and still have options 0 and 1 only. It is posssible higher stock options maybe only for key employees , but looking at the attrition pattern within employees having stock Option 0 is not enough to retain them.  Maybe it is time to revise these options to make them attractive for employees.
 
 
 **Environment Satisfaction and Attrition **
