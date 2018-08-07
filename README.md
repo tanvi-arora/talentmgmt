@@ -64,7 +64,7 @@ install.packages("library_name", repos="http://cran.rstudio.com/")
 ## Owners :
 Files                          | Created By        | Modified By
 -------------------------------|-------------------|----------------
-README.md                      | Tanvi Arora       |
+README.md                      | Tanvi Arora       | Anjli Solsi , Anne Francomano , Rebecca Holsapple
 Main.Rmd                       | Tanvi Arora       | Anjli Solsi , Anne Francomano , Rebecca Holsapple
 R/feature_sel_stepwise.R       | Tanvi Arora       |
 R/attrition_viz.R              | Tanvi Arora       |
