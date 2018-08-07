@@ -366,4 +366,39 @@ Averages were calculated for each factor based on rating, and the averages acros
 
 ```{r life_sat_analysis}
 ```
+### Summary - Insights for Top-Performers in Three Key Departments
+The Overall FY2017 attrition rate will undoubtedly damage TARA if it continues. 
+The top three contributors to attrition based on this dataset are Over Time, Stock Option Level and Environment Satisfaction. 
+
+1. With regards to Over Time, the three Over Time roles with the largest number of employees are Sales Executive, Research Scientist and Laboratory Technician.  In general, there is a risk of employee burnout in Over Time roles. 
+
+2. Where Stock Option Level is concerned, approximately 65% of those employees who left the company had Stock Option Level 0.  We have determined that there seems to be no correlation between Stock Option Level and number of years with TARA or job level.
+
+3. About 30% of employees who left had a low level response rating with regards to the Environment Satisfaction survey question.  While this number may seem low it could become significant based on potential longer term impact on employee morale, and should not be disregarded.  
+
+Exploring Income and Age, we saw that the two are related overall, with income growing initially along with age, and gradually declining in later years.  Income for males exceeds income for females.
+
+Work-Life Satisfaction, while more difficult to quantify, is nonetheless important.  Most top performers used one of the top two ratings for Satisfaction-related survey responses, with the majority of average response ratings landing close to each median.
+
+### Summary - Recommendation
+DDS Analytics makes the following recommendations:
+
+1. Consider revising Stop Option Level 0 plans
+
+2. Engage employees in a regular basis 
+
+a. Request employee feedback for immediate supervisor to improve relationship
+b. Hold more frequent employee appreciation activities
+c. Create periodic team building activities
+
+3. Consider that equal compensation is extremely important to women evaluating job opportunities when TARA extends job offers.
+
+4. Closely monitor how much over time is being accrued, by which employees and why, with the goal of avoiding employee burnout and enhancing the work environment.
+
+
+### Summary - Analysis Improvements
+DDS Analytics suggest the following analysis improvements:
+1. Utilize more advanced modeling techniques, such as random forest for prediction, and baruto for variable importance, which is built on random forest method.
+
+2. Model Job Satisfaction and Relationship Satisfaction within Attrition, as done in the proof-of-concept analysis with Stop Option Level and Environment Satisfaction.
 
