@@ -160,8 +160,20 @@ Skip level meetings are a suggested way to get feedback about immediate supervis
 
 ### Data Visualization 
 
+In visualizing the data, specific variables are examined to determine other relationships that may exist. The first variables to be examined are Age and Income. Income was chosen to be represented by Monthly Income over the other rate options. The bar plot provides one visualization of the total monthly income for each age of employees in the company by gender. 
+
+Based on the plot, for the majority of age groups, males as a total are compensated a higher amount than females as a total. That is something for TARA to consider and potentially be concerned about when looking at attrition, as equal pay is very important for females when looking at career opportunities. The trend of the graph highlights that individuals in the middle of their career tend to make the most money, while newer and very seasoned employees see a smaller income. It is important for TARA to consider income in an appeal to the newer and seasoned population, to retain great minds and the future leaders. 
+ 
+The scatterplot is a second visualization of the same data. Based on the fit line, it is clear there is a positive relationship between age and monthly income, having a trend of income increasing with age. However, as age increases, it is also visible that the range of income grows. This plot supports the older employees having a larger income, however, based on the bar plot representation, that may not necessarily be the case. TARA may benefit from evaluating their financial compensation among employees to make sure it is appropriate and reflective of value added to the company. 
+
 ```{r age_inc_analysis}
 ```
+
+The second visualization focuses on understanding the factors that directly influence overall work-life satisfaction. DDS Analytics determined the following variables are the most important in determining work-life satisfaction: work-life balance, environment satisfaction, job involvement, job satisfaction, performance rating, and work-relationship satisfaction. All of these play a role in an employee’s motivation, accountability, and overall attitude towards working. Employers often focus on the work at hand, forgetting the employee and the hard work required every day. 
+
+Histograms were chosen to represent the ratings and percentage of employees that put themselves in each category. Although there are many positive ratings, it is important to note the presence of negative ratings. As Environment Satisfaction was modeled with attrition earlier, TARA might choose to have the same modeling performed on Job and Relationship Satisfaction to gain a deeper understanding of attrition.
+
+Averages were calculated for each factor based on rating, and the averages across the categories hover around a 2.7. That number represents more than just “Medium/Good”, but less than “High/Excellent/Better”. Although the averages are on the positive side, TARA needs to look at what programs and resources can be implemented to shift the average towards “Very High/Outstanding/Best”. This could involve things such as greater recognition for work, open communication with management, and more transparency in communication and planning. The company needs to raise overall work-life satisfaction, as seen above, environment satisfaction was deemed one of the top three factors for attrition. 
 
 ```{r life_sat_analysis}
 ```
