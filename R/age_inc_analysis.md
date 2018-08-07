@@ -6,6 +6,17 @@ R source code to create data visualiations of variables Age and Monthly Income w
 **Source Datafile :** 
 Data/CaseStudy2-data.xlsx
 
+**Objects Used :**
+1) empdata.tidy - contains the tidied original data to use for analysis
+	 Dimensions: x rows, x columns
+
+**Objects Created :**
+1. brks - create a varibale to set limits for the plot
+2. lbls - define labels for the plot  
+
+**Functions Used :**
+1. *colnames()*: change column names of an object
+
 **Plots Created**
 
 Basic plot attritbutes 
@@ -43,17 +54,6 @@ Besides the basic cosmetic features,
   plot5
   plot6
 
-**Objects Used :**
-1) beer - contains the original data from the beer dataset
-	  Dimensions: 2410 rows, 7 columns
-2) breweries - contains the original data from the breweries dataset
-		Dimensions: 558 rows, 4 columns
 
-**Objects Created :**
-No objects were created
-empdata.WorkLifeBal......the rest of them 
-
-**Functions Used :**
-1. *colnames()*: change column names of an object
 
 
