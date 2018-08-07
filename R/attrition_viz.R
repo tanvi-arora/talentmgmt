@@ -46,10 +46,10 @@ ggplot(data= empdata.attr.no.ot) + geom_bar(aes(x=OverTime,y = freq, fill = perc
 
 ##@knitr plot_attr_ot_areas
 #plot OverTime within JobRole
-plot1 <- ggplot(data= empdata.tidy, aes(x=empdata.tidy$JobRole,fill = empdata.tidy$Attrition)) + geom_bar() + scale_fill_manual(values=c("#5F9EA0", "#E1B378")) + coord_flip() + labs( title="OverTime within Job Roles", caption="Source: empdata.tidy") +xlab("Job Roles") + ylab("Count of Employee") + theme( plot.title = element_text(hjust=0.5), panel.background = element_blank())
+plot1 <- ggplot(data= empdata.tidy, aes(x=empdata.tidy$JobRole,fill = OverTime)) + geom_bar() + scale_fill_manual(values=c("#5F9EA0", "#E1B378")) + coord_flip() + labs( title="OverTime within Job Roles", caption="Source: empdata.tidy") +xlab("Job Roles") + ylab("Count of Employee") + theme( plot.title = element_text(hjust=0.5), panel.background = element_blank())
 
 #plot OverTime within Departments
-plot2 <- ggplot(data= empdata.tidy, aes(x=empdata.tidy$Department,fill = empdata.tidy$Attrition)) + geom_bar() + scale_fill_manual(values=c("#5F9EA0", "#E1B378")) + coord_flip() + labs( title="OverTime within Job Roles", caption="Source: empdata.tidy") +xlab("Department") + ylab("Count of Employee") + theme( plot.title = element_text(hjust=0.5), panel.background = element_blank())
+plot2 <- ggplot(data= empdata.tidy, aes(x=empdata.tidy$Department,fill = OverTime)) + geom_bar() + scale_fill_manual(values=c("#5F9EA0", "#E1B378")) + coord_flip() + labs( title="OverTime within Job Roles", caption="Source: empdata.tidy") +xlab("Department") + ylab("Count of Employee") + theme( plot.title = element_text(hjust=0.5), panel.background = element_blank())
 
 grid.arrange(plot1,plot2, nrow=2,ncol=1)
 ##@knitr plot_attr_inv

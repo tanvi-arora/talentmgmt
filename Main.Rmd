@@ -123,7 +123,7 @@ There are 200+ people leaving the company , out of which about 54% did Overtime.
 ```{r plot_attr_ot_areas}
 ```
 
-Reviewing different areas within the company, we can see that Sales Executives within Sales department and Laboratory Technicians within Research & Development department are major overtime workers. 
+Reviewing different areas within the company, top 2 contenders for OVerTime are Research Scientist and Sales Executive roles. Most of the OVerTime is seen within the Research & Development Department. 
 
 
 **Stock Options and Attrition **
