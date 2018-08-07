@@ -8,11 +8,56 @@ A total of 37 data elements per employee entry were available.
 
 The Qualtrics Survey-Related Ratings information is as follows:  
 
-- Environment Satisfaction
-- Job Satisfaction
+- Environment Satisfaction   
+- Job Satisfaction            
 - Job Involvement
 - Relationship Satisfaction
 - Work Life Balance
+
+For the Education field , the corresponding descriptions are as follows:	
+  
+  1 = 'Below College'
+	
+	2 = 'College'
+	
+	3 = 'Bachelor'
+	
+	4 = 'Master'
+	
+	5 = 'Doctor'
+	
+For the EnvironmentSatisfaction, JobInvolvement, JobSatisfaction and RelationshipSatisfaction fields, the corresponding descriptions are as follows:	
+  
+  1 'Low'
+	
+	2 'Medium'
+	
+	3 'High'
+	
+	4 'Very High'
+	
+For the PerformanceRating field, the corresponding descriptions are as follows:	
+  
+  1 'Low'
+	
+	2 'Good'
+	
+	3 'Excellent'
+	
+	4 'Outstanding'
+	
+For the WorkLifeBalance, the corresponding descriptions are as follows:		
+  
+  1 'Bad'
+	
+	2 'Good'
+	
+	3 'Better'
+	
+	4 'Best'
+	
+	
+Qualtrics had already removed individuals under the age of 18 so there was no need to filter any additional entries.
 
 
 
