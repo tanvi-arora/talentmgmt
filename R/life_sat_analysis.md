@@ -1,7 +1,7 @@
 ### Code book for R/life_sat_analysis.R
 **Author :** Anjli Solsi
 
-R source code to create data visualiations of factors contributing to overall work-life satisfaction
+R source code to create data visualizations of factors contributing to overall work-life satisfaction
 
 **Source Datafile :** 
 Data/CaseStudy2-data.xlsx
@@ -29,37 +29,53 @@ Data/CaseStudy2-data.xlsx
 
 **Plots Created**
 
-Basic plot attritbutes 
+Plot attritbutes 
 labs = define title caption for source of image
 xlab = label for x axis
 ylab = label for y axis
 theme( plot.title = element_text(hjust=0.5), panel.background = element_blank()) : to place title of plot in the centre and make background of plot as blank with no color
+fill = desired factor percentage
+scale_fill_gradient = color gradient created using two specified colors
+guides = hide the legends 
 
-**Pfd**
-
-create frequency and percentage table
+**Plot 1**
+create frequency and percentage table for factor Work Life Balance
 *Datasets*
-empdata.attr = describe data
+empdata.WorkLifeBal = describe data
 
-*plot*  - piechart
-Besides the basic cosmetic features, 
-1- ggplot :
-  data - 
-  fill color = 
-  specifics of ggplot used
-  
-  
-  **PLOT2**
-  
-  Factor for analysis - life satisfaction: all the factors
-  *Datasets*
-  empdata.tidy - base dataset from cleaning data
-  
-  *plot* - barchart
-  1) data = empdata.attr.yes.ot
-  plot1
-  plot2
-  plot3
-  plot4
-  plot5
-  plot6
+*plot* - histogram
+
+**Plot 2**
+create frequency and percentage table for factor Environment Satisfaction
+*Datasets*
+empdata.EnvirSatisf = describe data
+
+*plot* - histogram
+
+**Plot 3**
+create frequency and percentage table for factor Job Involvement
+*Datasets*
+empdata.Job Involvmnt = describe data
+
+*plot* - histogram
+
+**Plot 4**
+create frequency and percentage table for factor Job Satisfaction
+*Datasets*
+empdata.JobSatisf = describe data
+
+*plot* - histogram
+
+**Plot 5**
+create frequency and percentage table for factor Performance Rating
+*Datasets*
+empdata.PerforRating = describe data
+
+*plot* - histogram
+
+**Plot 6**
+create frequency and percentage table for factor RelshipSatis
+*Datasets*
+empdata.RelshipSatis = describe data
+
+*plot* - histogram
