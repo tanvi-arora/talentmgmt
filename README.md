@@ -16,18 +16,30 @@ knitr package is used along with R markdown to share results and code in HTML fo
 ggplot2 is a data visualization package for the statistical programming language R. Created by Hadley Wickham in 2005.
 3) scales \
 scale graphical scales map data to aesthetics, and provide methods for automatically determining breaks and labels for axes and legends in R. Created by Hadley Wickham in 2016. 
-4) xlsx - This package helps load xlsx files as is received from source. xlsx is not a widely accepted format and should encourage using source files in base formats like csv.This package requires java SDK and JAVA_HOME to be set up in the environment variables.
-5) plyr
-6) dplyr - dplyr provides a flexible grammar of data manipulation. It's the next iteration of plyr, focused on tools for working with data frames (hence the d in the name).
-7) caret - caret library is needed for varImp function. THs function was used to get importance of variables in the prediction model
-8) corrplot - required to get correlations between predictors
-9) ggrepel - This package contains extra geoms for ggplot2 to help with labeling.
-10) randomcoloR- This package is used to generate different appealing palettes of random colors for plots. 
-11) gridExtra - This package provides functions to work with graphics and arrange multiple on a sheet.
-12) ggthemes- This package aides ggplot2 by providing extra themes, scales, and geoms to create intricate plots. 
-13) psych  -
-14) kableExtra -
-15) summarytools -
+4) xlsx \
+This package helps load xlsx files as is received from source. xlsx is not a widely accepted format and should encourage using source files in base formats like csv.This package requires java SDK and JAVA_HOME to be set up in the environment variables.
+5) plyr \
+A set of tools that solves a common set of problems: here we used it to summarise data by panels or collapse high-dimensional arrays to simpler summary statistics. 
+6) dplyr \
+dplyr provides a flexible grammar of data manipulation. It's the next iteration of plyr, focused on tools for working with data frames (hence the d in the name).
+7) caret \
+caret library is needed for varImp function. THs function was used to get importance of variables in the prediction model
+8) corrplot \
+required to get correlations between predictors
+9) ggrepel 
+\This package contains extra geoms for ggplot2 to help with labeling.
+10) randomcoloR \
+This package is used to generate different appealing palettes of random colors for plots. 
+11) gridExtra \
+This package provides functions to work with graphics and arrange multiple on a sheet.
+12) ggthemes \
+This package aides ggplot2 by providing extra themes, scales, and geoms to create intricate plots. 
+13) psych  \
+A general purpose toolbox for personality, psychometric theory and experimental psychology provide basic descriptive statistics.
+14) kableExtra \
+Build complex HTML or 'LaTeX' tables using 'kable()' from 'knitr' and the piping syntax from 'magrittr'.
+15) summarytools \
+Data frame summaries, cross-tabulations, weight-enabled frequency tables and common univariate statistics in concise tables available in a variety of formats (plain ASCII, Markdown and HTML).
 
 Below R code installs above packages 
 
@@ -61,6 +73,7 @@ R/life_sat_analysis.R          | Anjli Solsi       |
 R/load_dataset.R               | Anne Francomano   |
 R/tidy_dataset.R               | Anne Francomano   |
 R/dept_attrpct.R               | Anne Francomano   |
+R/desc_stat.R                  | Rebecca Holsapple |
 
 
 ## Report :
