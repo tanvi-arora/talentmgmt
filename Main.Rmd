@@ -37,19 +37,198 @@ library(summarytools)
 # read code chunks
 read_chunk('R/load_dataset.R')
 read_chunk('R/tidy_dataset.R')
+read_chunk('R/dept_attrpct.R')
 read_chunk('R/feature_sel_stepwise.R')
 read_chunk('R/attrition_viz.R')
 read_chunk('R/desc_stat.R')
 read_chunk('R/age_inc_analysis.R')
 read_chunk('R/life_sat_analysis.R')
 ```
+### Introduction
+
+TARA Pharma Corp. (TARA), headquartered in Seattle, WA, develops, manufactures and markets a range of dietary supplement product lines. With 4,000 employees and 2 billion USD (FY 2017) in revenue, it must maintain its global brand integrity and continue its financial growth. Doing so depends on attracting and retaining great talent.  Players in the Seattle pharmaceutical industry face stiff competition for new hires, and the fact that it is not uncommon for some local firms to entice away their competitors' current employees makes it even more challenging.
+
+To gain a competitive edge over its rivals, TARA is evaluating the role a data science approach to talent management could play as part of its overall business strategy. TARA's CIO and team have proposed an analytics-centric talent management initiative, which, like all proposals, is subject to a proof-of-concept analysis before it can be presented to the TARA executive managment team for consideration/approval.
+
+TARA's CIO has contracted DDS Analytics to conduct the proof-of-concept analysis as part of evaluating the intiative. The proof-of-concept analysis aims to illustrate how applying data analytics to employee data would provide insight for employee retention and in turn contribute to the justification for investing in the initiative.
+
+TARA management suspects that the attrition rate is too high for its top-performing employees in the Human Resources, Research & Development, and Sales departments. Thus far, the feeling has been based on an informal headcount review not formal analysis. DDS Analytics will use a formal Data Science analysis to take the first in-depth look at the its employee data. 
+
+TARA management provided internal employee data for analysis purposes, with two key analysis objectives in mind:
+
+**Analysis Key Objectives for Proof-of-Concept:**
+
+1. Identify at a minimum the top three factors contributing to top-performing employee attrition in the Human Resources, Research and Development, and Sales departments.
+
+2. Identify job role specific trends to better understand employee satisfaction
+
+### Data Source
+
+The data set utilized in the analyses was compiled by Qualtrics as requested by TARA management. Qualtrics conducted employee satisfaction surveys and merged the survey results with TARA personnel records for 2017 Fiscal Year, ensuring it was ultimately stripped of all personal identifiable information (e.g. name, date of birth). The Qualtrics dataset only contains employees whose most recent performance ratings are 3 (Excellent) or 4 (Outstanding) in three departments of its Seattle location: Human Resources, Research & Development, and Sales.
+
+A total of 37 data elements per employee entry were available. The full details of each data element is located in the dataset codebook.
+
+The Qualtrics Survey-Related Ratings information is as follows:  Environment Satisfaction, Job Satisfaction, Job Involvement, Relationship Satisfaction and Work Life Balance.
+
+The TARA Personnel Records-Related information (for FY 2017) can be grouped as follows:
+
+Individual Related:
+
+- Age
+
+- Over 18 (y/n)
+
+- Gender
+
+- Total Working Years
+
+- Education
+
+- Education Field
+
+- Marital Status
+
+- Number of companies worked prior to TARA
+
+- Commuting Distance
+
+Status Related:
+
+- Employee Number
+
+- Employee Count
+
+- Attrition (y/n)
+
+
+Position Related:
+
+- Department
+
+- Job Role
+
+- Job Level
+
+- Business Travel
+
+- Stock Options Level
+
+- OverTime (y/n)
+
+- Standard Hours
+
+- years with Current Manager
+
+- Years at TARA
+
+
+Compensation Related:
+
+- Percent Salary Hike
+
+- Monthly Income
+
+- Monthly Rate
+
+- Daily Rate
+
+- Hourly Rate
+
+
+Performance Related:
+
+- Performance Rating
+
+- Years in Current Role
+
+- Years Since Last Promotion
+
+- Training Time Used Last Year
+
 ### Load Data
 ```{r load_dataset}
 ```
 
 ### Tidy Data
+In summary, tidying the data entailed the following tasks:
+
+(1) Renamed column names in order to shorten them to no more than 12 characters to comply with TARA standard. 
+
+(2) Verified that there was no inidication of missing data.
+
+(3) Converted multiple fields from INT data type to Factors to make it clear that the data represents categories, not continuous numbers.
+
+(4) Addeded descriptive fields that corresponds to numeric ratings, such a "Excellent" for the rating 3, for the following data fields:  
+
+- Education description field is EducDesc
+
+- EnvironmentSatisfaction description field is EnvirSatDesc
+
+- JobInvolvement description field is JobInvlvDesc
+
+- JobSatisfaction description field is JobSatDesc
+
+- RelationshipSatisfaction description field is RlshpSatDesc
+
+- PerformanceRating description field is PerfRtgDesc
+
+- WorkLifeBalance description field is WkLifBalDesc 
+
+
+For the Education field, the corresponding descriptions are as follows:	
+  
+  1 = 'Below College'
+	
+	2 = 'College'
+	
+	3 = 'Bachelor'
+	
+	4 = 'Master'
+	
+	5 = 'Doctor'
+	
+For the EnvironmentSatisfaction, JobInvolvement, JobSatisfaction and RelationshipSatisfaction fields, the corresponding descriptions are as follows:	
+  
+  1 'Low'
+	
+	2 'Medium'
+	
+	3 'High'
+	
+	4 'Very High'
+	
+For the PerformanceRating field, the corresponding descriptions are as follows:	
+  
+  1 'Low'
+	
+	2 'Good'
+	
+	3 'Excellent'
+	
+	4 'Outstanding'
+	
+For the WorkLifeBalance, the corresponding descriptions are as follows:		
+  
+  1 'Bad'
+	
+	2 'Good'
+	
+	3 'Better'
+	
+	4 'Best'
+	
+	
+Qualtrics had already removed individuals under the age of 18 so there was no need to filter any additional entries.
 ```{r tidy_dataset}
 ```
+
+
+### Attrition Percent Per Department  
+Formally determing the FY2017 top-performer percent attrition for the three departments of concern, confirmed TARA's thoughts that the attrition rates seemed higher in these departments.  Ideally, companies aim to keep attrition rates for top-performers as close to 0 as possible.
+
+```{r dept_attrpct}
+```
+
 
 ### Preliminary Analysis
 

@@ -3,7 +3,7 @@
 # Created By  : Anne Francomano
 # Created Dt  : 07/22/2018
 # Description : R code clean the employee data provided by Qualtrics
-# Source File : This script uses the source file EmployeeData201807.csv
+# Source File : This script uses the source file EmployeeData201807.xlsx
 ###########################################################################################
 ##@knitr tidy_dataset
 
