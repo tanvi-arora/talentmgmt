@@ -10,8 +10,10 @@ R source code to determine the tidy the employee attrition data provided by Qual
 1) empdata.raw
 
 **objects created :**
-1. empdata.updcolnames \ Datafrme; A copy of empdata.raw dataframe which is then modified by renaming its column names so that they do not exceed 12 characters. 
-2. empdata.okcolnames \  Dataframe; the final updated version of empdata.updcolnames once its column names no longer exceed 12 characters.
+1. empdata.updcolnames \        
+        Datafrme; A copy of empdata.raw dataframe which is then modified by renaming its column names so that they do not exceed 12 characters. 
+2. empdata.okcolnames \ 
+        Dataframe; the final updated version of empdata.updcolnames once its column names no longer exceed 12 characters.
 3. set_educdescrip \  Function that creates and populates a new column containing the description of education level based on a numeric value in a source column in the same dataframe. \
         arguments - dataframe, sourcecol, newcol \
         dataframe - name of a datafram object \
