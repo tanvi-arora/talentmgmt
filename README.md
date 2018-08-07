@@ -77,7 +77,7 @@ R/desc_stat.R                  | Rebecca Holsapple |
 
 
 ## Report :
-[Main.Rmd](https://github.com/tanvi-arora/talentmgmt/blob/master/Main.Rmd)
+[Main.html](https://github.com/tanvi-arora/talentmgmt/blob/master/Main.html)
 
 
 ## Recommended future changes / To do's :
