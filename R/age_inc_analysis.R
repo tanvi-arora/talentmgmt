@@ -8,7 +8,9 @@
 ##@knitr age_inc_analysis
 
 #first bar plot representation of Total Monthly Income by Age
+#remove exponential scaling of numbers
 options(scipen = 999)
+#set limits for plot and specify axis labels
 brks <- seq(-500000, 500000, 50000)
 lbls <- paste0(as.character(c(seq(500, 0, -50), seq(50, 500, 50))), "k")
 ggplot(empdata.tidy, aes(x=reorder(Age, Age), y=MonthlyInc, fill=Gender)) + 
