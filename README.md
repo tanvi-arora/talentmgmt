@@ -56,6 +56,9 @@ R/feature_sel_stepwise.R       | Tanvi Arora       |
 R/attrition_viz.R              | Tanvi Arora       |
 R/age_inc_analysis.R           | Anjli Solsi       |
 R/life_sat_analysis.R          | Anjli Solsi       |
+R/load_dataset.R               | Anne Francomano   |
+R/tidy_dataset.R               | Anne Francomano   |
+R/dept_attrpct.R               | Anne Francomano   |
 
 
 ## Report :
