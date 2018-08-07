@@ -19,10 +19,10 @@ scale graphical scales map data to aesthetics, and provide methods for automatic
 6) dplyr - dplyr provides a flexible grammar of data manipulation. It's the next iteration of plyr, focused on tools for working with data frames (hence the d in the name).
 7) caret - caret library is needed for varImp function. THs function was used to get importance of variables in the prediction model
 8) corrplot - required to get correlations between predictors
-9) ggrepel - This package contains extra geoms for ggplot2.
-10) randomcoloR- 
-11) gridExtra -
-12) ggthemes- 
+9) ggrepel - This package contains extra geoms for ggplot2 to help with labeling.
+10) randomcoloR- This package is used to generate different appealing palettes of random colors for plots. 
+11) gridExtra - This package provides functions to work with graphics and arrange multiple on a sheet.
+12) ggthemes- This package aides ggplot2 by providing extra themes, scales, and geoms to create intricate plots. 
 13) psych  -
 14) kableExtra -
 15) summarytools -
@@ -54,6 +54,8 @@ README.md                      | Tanvi Arora       |
 Main.Rmd                       | Tanvi Arora       | Anjli Solsi , Anne Francomano , Rebecca Holsapple
 R/feature_sel_stepwise.R       | Tanvi Arora       |
 R/attrition_viz.R              | Tanvi Arora       |
+R/age_inc_analysis.R           | Anjli Solsi       |
+R/life_sat_analysis.R          | Anjli Solsi       |
 
 
 ## Report :
